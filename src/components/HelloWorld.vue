@@ -51,7 +51,25 @@ function startMeeting(signature) {
         tk: registrantToken,
         zak: zakToken,
         success: (success) => {
-          console.log(success);
+          console.log('join', success);
+          console.log({sharedarraybuffer: typeof SharedArrayBuffer === 'function'});
+
+          const vbListing = [{
+            displayName: 'LoremPicsum',
+            fileName: 'lorempicsum.jpg',
+            id: 'lorempicsum',
+            url: 'https://picsum.photos/1600/900'
+          }];
+
+          ZoomMtg.updateVirtualBackgroundList({
+            error: function(error) { 
+              console.log('updateVirtualBackgroundList error', error) 
+            },
+            success: function() { 
+              console.log('updateVirtualBackgroundList success') 
+            },
+            vbList: vbListing
+          })
         },
         error: (error) => {
           console.log(error);

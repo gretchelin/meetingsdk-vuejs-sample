@@ -4,9 +4,9 @@ import { ZoomMtg } from '@zoom/meetingsdk';
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
 
-var authEndpoint = ''
-var meetingNumber = '123456789'
-var passWord = ''
+var authEndpoint = 'https://nonresisting-ela-subparalytic.ngrok-free.dev' // 'https://zoom.us/oauth/authorize?response_type=code&client_id=PKwH9lvjSgi9p23IZa7WxQ&redirect_uri=https://nonresisting-ela-subparalytic.ngrok-free.dev'
+var meetingNumber = '89991537918'
+var passWord = 'Jh58SF'
 var role = 0
 var userName = 'Vue.js'
 var userEmail = ''
